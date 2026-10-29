@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oryem Kilama · Software engineer</title>
+<meta name="description" content="Oryem Kilama, software engineer. AI, web apps and the tools around them.">
+<meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;450;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=13">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="frame">
+
+  <!-- top bar: name + tabs -->
+  <header class="bar">
+    <span class="cell cell-name" translate="no">oryem-kilama</span>
+    <nav class="tabs" aria-label="Pages">
+      <a class="tab" href="#hello" data-page="hello">_hello</a>
+      <a class="tab" href="#about-me" data-page="about-me">_about-me</a>
+      <a class="tab" href="#projects" data-page="projects">_projects</a>
+      <a class="tab tab-end" href="#contact-me" data-page="contact-me">_contact-me</a>
+    </nav>
+  </header>
+
+  <main class="pages">
+
+    <!-- ============ _hello ============ -->
+    <section class="page page-hello" id="hello" aria-label="Introduction">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="hello">
+        <p class="hi">Hi all. I am</p>
+        <h1 class="name" translate="no">Oryem Kilama</h1>
+        <p class="role">&gt; Software engineer</p>
+
+        <div class="code">
+          <p class="cmt">// find my profile on LinkedIn:</p>
+          <p><span class="kw">const</span> <span class="var">linkedin</span> = <a class="str" href="https://www.linkedin.com/in/oryemkilama/" target="_blank" rel="noopener">"https://linkedin.com/in/oryemkilama"</a></p>
+          <p class="cmt cmt-gap">// find my code on GitHub:</p>
+          <p><span class="kw">const</span> <span class="var">github</span> = <a class="str" href="https://github.com/okoryem" target="_blank" rel="noopener">"https://github.com/okoryem"</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ _about-me ============ -->
+    <section class="page page-about" id="about-me" aria-label="About me">
+      <aside class="side">
+        <p class="side-head">▾ personal-info</p>
+        <ul class="tree" role="list">
+          <li><button class="file" type="button" data-file="bio" aria-pressed="true"><span class="folder f-pink" aria-hidden="true"></span>bio</button></li>
+          <li><button class="file" type="button" data-file="interests" aria-pressed="false"><span class="folder f-teal" aria-hidden="true"></span>interests</button></li>
+          <li>
+            <span class="file file-dir"><span class="folder f-indigo" aria-hidden="true"></span>education</span>
+            <ul class="tree tree-sub" role="list">
+              <li><button class="file" type="button" data-file="university" aria-pressed="false"><span class="doc" aria-hidden="true">▤</span>university</button></li>
+            </ul>
+          </li>
+        </ul>
+        <p class="side-head side-head-2">▾ contacts</p>
+        <ul class="tree tree-contacts" role="list">
+          <li><a href="mailto:okoryem@gmail.com">✉ okoryem@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/oryemkilama/" target="_blank" rel="noopener">in oryemkilama</a></li>
+        </ul>
+      </aside>
+
+      <div class="pane pane-file">
+        <div class="crumb"><span id="file-name">bio</span></div>
+        <!-- each file is a list of lines; numbers come from CSS -->
+        <ol class="lines" data-file-body="bio">
+          <li>/**</li>
+          <li> * About me</li>
+          <li> * I’m Oryem Kilama, a software engineer. I build AI, web apps and the tools around them, and I keep them running after launch.</li>
+          <li> *</li>
+          <li> * What I enjoy most is building with AI APIs: taking a model and wiring it into real software so it does useful work, like checking invoices or putting together an outfit.</li>
+          <li> *</li>
+          <li> * I studied Computer Science and Global Studies (Migration) at the University of Delaware.</li>
+          <li> */</li>
+        </ol>
+        <ol class="lines" data-file-body="interests" hidden>
+          <li>/**</li>
+          <li> * Interests</li>
+          <li> * - Building with AI APIs</li>
+          <li> * - Traveling</li>
+          <li> * - Videography</li>
+          <li> * - Soccer</li>
+          <li> */</li>
+        </ol>
+        <ol class="lines" data-file-body="university" hidden>
+          <li>/**</li>
+          <li> * University of Delaware</li>
+          <li> * 2021 – 2025</li>
+          <li> *</li>
+          <li> * Double major:</li>
+          <li> *   Computer Science</li>
+          <li> *   Global Studies (Migration)</li>
+          <li> */</li>
+        </ol>
+      </div>
+
+      <div class="pane pane-aside">
+        <!-- right pane changes with the open file -->
+        <div class="aside" data-aside="bio">
+          <p class="cmt aside-title">// skills <span class="hint">(click one to see where I used it)</span></p>
+          <div class="skill-group">
+            <p class="cmt">// languages</p>
+            <div class="skills"><button class="skill" type="button" data-skill="TypeScript">TypeScript</button><button class="skill" type="button" data-skill="JavaScript">JavaScript</button><button class="skill" type="button" data-skill="Rust">Rust</button><button class="skill" type="button" data-skill="Java">Java</button><span class="skill">SQL</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="cmt">// frontend</p>
+            <div class="skills"><button class="skill" type="button" data-skill="React">React</button><button class="skill" type="button" data-skill="Next.js">Next.js</button><span class="skill">Vite</span><span class="skill">HTML & CSS</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="cmt">// AI</p>
+            <div class="skills"><button class="skill" type="button" data-skill="AI">AI APIs</button><button class="skill" type="button" data-skill="Claude">Claude</button><span class="skill">TypeSafe Jev</span><button class="skill" type="button" data-skill="MCP">MCP</button></div>
+          </div>
+          <div class="skill-group">
+            <p class="cmt">// backend & infra</p>
+            <div class="skills"><button class="skill" type="button" data-skill="Cloudflare">Cloudflare Workers</button><button class="skill" type="button" data-skill="PostgreSQL">PostgreSQL</button><button class="skill" type="button" data-skill="Tauri">Tauri</button><button class="skill" type="button" data-skill="GitHub Actions">GitHub Actions</button><span class="skill">ffmpeg</span><span class="skill">Render</span></div>
+          </div>
+        </div>
+
+        <div class="aside" data-aside="interests" hidden>
+          <p class="cmt aside-title">// from my travels</p>
+          <div class="videos">
+            <!-- VIDEO SLOTS: save clips as media/travel-1.mp4 … travel-3.mp4 (and a .jpg still for each) -->
+            <figure class="video" data-video="media/travel-1.mp4" data-poster="media/travel-1.jpg"><div class="video-empty">// loading video…</div><figcaption>// Huacachina, Peru</figcaption></figure>
+            <figure class="video" data-video="media/travel-2.mp4" data-poster="media/travel-2.jpg"><div class="video-empty">// loading video…</div><figcaption>// Machu Picchu, Peru</figcaption></figure>
+            <figure class="video" data-video="media/travel-3.mp4" data-poster="media/travel-3.jpg"><div class="video-empty">// loading video…</div><figcaption>// Acatenango, Guatemala</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="aside" data-aside="university" hidden>
+          <p class="cmt aside-title">// where my two majors met</p>
+          <div class="mini">
+            <img src="media/migration-web.jpg" width="1600" height="1000" loading="lazy" alt="Migration Map showing where refugees from Syria live in 2025.">
+            <div class="mini-body">
+              <p><b>Migration Map</b> puts the UN refugee agency’s data on an interactive world map: Global Studies (Migration) questions, answered with Computer Science.</p>
+              <button class="btn" type="button" data-open="d-mm">view-project</button>
+            </div>
+          </div>
+          <figure class="snip">
+            <figcaption class="snip-head">
+              <img src="https://github.com/okoryem.png?size=64" width="32" height="32" alt="" loading="lazy">
+              <span><b>@okoryem</b><br>Migration Map · MigrationAPI.java</span>
+            </figcaption>
+            <pre><code data-lang="java">// The API mixes numbers and strings ("0", "-") in numeric fields; treat anything
+// that isn't a number as zero.
+private static final Gson GSON = new GsonBuilder()
+        .registerTypeAdapter(int.class, (JsonDeserializer&lt;Integer&gt;) (json, type, context) -&gt; {
+            try {
+                return json.getAsInt();
+            } catch (RuntimeException e) {
+                return 0;
+            }
+        })
+        .create();</code></pre>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ _projects ============ -->
+    <section class="page page-projects" id="projects" aria-label="Projects">
+      <aside class="side">
+        <button class="side-head" type="button" aria-expanded="true" aria-controls="filters"><span class="caret" aria-hidden="true">▾</span> projects</button>
+        <fieldset class="filters" id="filters">
+          <legend class="sr">Filter projects by technology</legend>
+          <!-- filled from the project data by script.js -->
+        </fieldset>
+      </aside>
+
+      <div class="proj-main">
+        <div class="crumb"><span id="crumb-text">all</span><button class="crumb-x" type="button" id="crumb-clear" aria-label="Clear filters">×</button></div>
+        <div class="cards" id="cards">
+
+          <article class="card" data-tech="Next.js,TypeScript,PostgreSQL,PayPal APIs,AI,Claude">
+            <p class="card-label"><b>Project 1</b> // _invoice-guard</p>
+            <div class="card-box">
+              <img class="card-img" src="media/invoice-guard.jpg" width="1600" height="992" loading="lazy" alt="Invoice Guard's dashboard: 4 paid, 5 waiting for the owner, 5 blocked, with a blocked $118 invoice whose bank details changed.">
+              <div class="card-body">
+                <p>An agent that pays the PayPal invoices you can trust and stops the ones you can’t.</p>
+                <button class="btn" type="button" data-open="d-ig">view-project</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tech="Rust,Tauri,JavaScript,AI">
+            <p class="card-label"><b>Project 2</b> // _split-seek</p>
+            <div class="card-box">
+              <img class="card-img" src="media/split-seek.jpg" width="1600" height="1110" loading="lazy" alt="SplitSeek searching a folder of 57 clips for &quot;cat&quot;, with six ranked matches and their timestamps.">
+              <div class="card-body">
+                <p>Search a folder of video footage by describing a moment in plain words.</p>
+                <button class="btn" type="button" data-open="d-ss">view-project</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tech="React,Cloudflare,AI,GitHub Actions">
+            <p class="card-label"><b>Project 3</b> // _fitmeai</p>
+            <div class="card-box">
+              <img class="card-img" src="media/fitmeai.jpg" width="1600" height="1000" loading="lazy" alt="Fit Me Out AI's home page.">
+              <div class="card-body">
+                <p>An AI stylist that builds a full outfit from a store’s live catalogue.</p>
+                <button class="btn" type="button" data-open="d-fit">view-project</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tech="React,TypeScript,Cloudflare,MCP">
+            <p class="card-label"><b>Project 4</b> // _nextnode-notes</p>
+            <div class="card-box">
+              <img class="card-img" src="media/nextnode-desktop.jpg" width="1600" height="972" loading="lazy" alt="NextNode's home page with a canvas of linked notes.">
+              <div class="card-body">
+                <p>A visual notes app where your notes stay plain files you own.</p>
+                <button class="btn" type="button" data-open="d-nn">view-project</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tech="JavaScript,Java">
+            <p class="card-label"><b>Project 5</b> // _migration-map</p>
+            <div class="card-box">
+              <img class="card-img" src="media/migration-web.jpg" width="1600" height="1000" loading="lazy" alt="Migration Map showing where refugees from Syria live in 2025, with Turkey, Germany and Lebanon at the top of the list.">
+              <div class="card-body">
+                <p>An interactive world map of where refugees come from and where they find protection.</p>
+                <button class="btn" type="button" data-open="d-mm">view-project</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <p class="empty" id="empty" hidden>// no projects match those filters</p>
+      </div>
+    </section>
+
+    <!-- ============ _contact-me ============ -->
+    <section class="page page-contact" id="contact-me" aria-label="Contact">
+      <aside class="side">
+        <p class="side-head">▾ contacts</p>
+        <ul class="tree tree-contacts" role="list">
+          <li><a href="mailto:okoryem@gmail.com">✉ okoryem@gmail.com</a></li>
+        </ul>
+        <p class="side-head side-head-2">▾ find-me-also-in</p>
+        <ul class="tree tree-contacts" role="list">
+          <li><a href="https://github.com/okoryem" target="_blank" rel="noopener">↗ GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/oryemkilama/" target="_blank" rel="noopener">↗ LinkedIn</a></li>
+        </ul>
+      </aside>
+
+      <div class="pane pane-form">
+        <div class="crumb"><span>contacts</span></div>
+
+        <form class="cform" id="cform" novalidate>
+          <label for="f-name">_name:</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+
+          <label for="f-email">_email:</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" required>
+
+          <label for="f-message">_message:</label>
+          <textarea id="f-message" name="message" rows="5" placeholder="your message here…" required></textarea>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn" type="submit" id="sendBtn">submit-message</button>
+        </form>
+
+        <div class="sent" id="sent" hidden>
+          <p class="sent-title">Thank you! 🤘</p>
+          <p>Your email app should have opened with your message to me. Press send there and I’ll get back to you.</p>
+          <button class="btn" type="button" id="send-new">send-new-message</button>
+        </div>
+      </div>
+
+      <div class="pane pane-code">
+        <ol class="lines lines-code" aria-hidden="true" id="code-preview"></ol>
+      </div>
+    </section>
+  </main>
+
+  <!-- bottom bar -->
+  <footer class="bar bar-foot">
+    <span class="cell">find me in:</span>
+    <a class="cell cell-icon" href="https://www.linkedin.com/in/oryemkilama/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+    </a>
+    <a class="cell cell-icon cell-end" href="https://github.com/okoryem" target="_blank" rel="noopener" aria-label="GitHub">
+      <span class="cell-text">@okoryem</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>
+    </a>
+  </footer>
+</div>
+
+<!-- ============ project details (opened by view-project) ============ -->
+<dialog class="detail" id="d-ig" aria-labelledby="d-ig-h">
+  <button class="detail-x" type="button" data-close aria-label="Close">×</button>
+  <p class="card-label"><b>Project 1</b> // _invoice-guard</p>
+  <h2 id="d-ig-h">Invoice Guard</h2>
+  <p class="meta">2026 · PayPal AI Hackathon entry</p>
+  <p>Every invoice gets three checks: PayPal confirms it’s real, the payment history says whether the sender and amount are expected, and a scam-detection model reads the wording. Plain, tested rules then decide to pay, block or ask the owner, and Claude writes a short note explaining any stop. It never pays a first-time sender without asking.</p>
+  <ul class="stack"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>PayPal APIs</li><li>TypeSafe Jev</li><li>Claude</li><li>Render</li></ul>
+  <div class="links-row">
+    <a class="btn btn-link" href="https://www.youtube.com/watch?v=tk77iwL72RI" target="_blank" rel="noopener">watch the demo ↗</a>
+    <a class="btn btn-link" href="https://github.com/okoryem/invoice-guard" target="_blank" rel="noopener">view on GitHub ↗</a>
+  </div>
+</dialog>
+
+<dialog class="detail" id="d-ss" aria-labelledby="d-ss-h">
+  <button class="detail-x" type="button" data-close aria-label="Close">×</button>
+  <p class="card-label"><b>Project 2</b> // _split-seek</p>
+  <h2 id="d-ss-h">SplitSeek</h2>
+  <p class="meta">2026 · Devpost “Build With AI: Basics” hackathon</p>
+  <p>LOG footage is flat and grey, so dozens of clips from one trip look almost identical as thumbnails. SplitSeek is a small macOS app you keep open next to your video editor: point it at a folder, type something like “a waterfall” or “llamas”, and it ranks the matching moments with timestamps, confidence and a preview that starts at the right second.</p>
+  <p>A Rust engine pulls a frame every 2 seconds with ffmpeg, decoding only keyframes on the Mac’s video hardware (about 30× faster on 4K HEVC), caches them, and asks TypeSafe’s Jev image model one yes/no question per frame. Back-to-back matches are joined into stretches and ranked. Original clips are only ever read, never changed.</p>
+  <ul class="stack"><li>Rust</li><li>Tauri 2</li><li>JavaScript</li><li>ffmpeg</li><li>VideoToolbox</li><li>TypeSafe Jev</li></ul>
+  <div class="links-row">
+    <a class="btn btn-link" href="https://www.youtube.com/watch?v=_8SlFUXS8xs" target="_blank" rel="noopener">watch the demo ↗</a>
+    <a class="btn btn-link" href="https://github.com/okoryem/split-seek" target="_blank" rel="noopener">view on GitHub ↗</a>
+  </div>
+</dialog>
+
+<dialog class="detail" id="d-fit" aria-labelledby="d-fit-h">
+  <button class="detail-x" type="button" data-close aria-label="Close">×</button>
+  <p class="card-label"><b>Project 3</b> // _fitmeai</p>
+  <h2 id="d-fit-h">FitMeAI</h2>
+  <p class="meta">2025–2026</p>
+  <p>One click picks a top, bottoms, outerwear and accessories that go together, each linked to its product page. Visitors can steer it by occasion, colours and budget, and TypeSafe’s Jev model decides what works together. A daily job refreshes thousands of products into Cloudflare KV, split so each request reads only what it needs. Built on boohooMAN’s public men’s catalogue as a test store; not affiliated with boohooMAN.</p>
+  <ul class="stack"><li>React</li><li>Vite</li><li>Cloudflare Workers</li><li>Workers KV</li><li>TypeSafe Jev</li><li>GitHub Actions</li></ul>
+  <a class="btn btn-link" href="https://fitmeoutai.com" target="_blank" rel="noopener">open fitmeoutai.com ↗</a>
+</dialog>
+
+<dialog class="detail" id="d-nn" aria-labelledby="d-nn-h">
+  <button class="detail-x" type="button" data-close aria-label="Close">×</button>
+  <p class="card-label"><b>Project 4</b> // _nextnode-notes</p>
+  <h2 id="d-nn-h">NextNode Notes</h2>
+  <p class="meta">2026 · my own product</p>
+  <p>Notes, files and sketches sit on infinite canvases, saved as Markdown and JSON Canvas files in storage you already have: your computer, Google Drive, Dropbox, GitHub or OneDrive. It has an AI assistant that works with any model provider, and an MCP server so AI apps can work inside your notes. I run, fix and ship updates to it myself.</p>
+  <ul class="stack"><li>React 19</li><li>TypeScript</li><li>Vite</li><li>React Flow</li><li>CodeMirror 6</li><li>three.js</li><li>Cloudflare Workers</li><li>MCP</li></ul>
+  <a class="btn btn-link" href="https://nextnodenotes.com" target="_blank" rel="noopener">open nextnodenotes.com ↗</a>
+</dialog>
+
+<dialog class="detail" id="d-mm" aria-labelledby="d-mm-h">
+  <button class="detail-x" type="button" data-close aria-label="Close">×</button>
+  <p class="card-label"><b>Project 5</b> // _migration-map</p>
+  <h2 id="d-mm-h">Migration Map</h2>
+  <p class="meta">2024 – 2026</p>
+  <p>An interactive world map built on live data from the UN refugee agency (UNHCR). Click a country to see where its people have fled, with figures for refugees, asylum seekers and people displaced inside the country; click a second country to see a single route, such as how many Syrian refugees live in Germany. Every view has its own link, so a map can be shared exactly as you see it.</p>
+  <p>It started as a Java desktop app and is now a web app built without a framework. I built it to bring together my two majors, Global Studies (Migration) and Computer Science.</p>
+  <ul class="stack"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>UNHCR API</li><li>Java</li><li>JavaFX</li></ul>
+  <div class="links-row">
+    <a class="btn btn-link" href="https://okoryem.github.io/Migration_Map/#year=2025&amp;type=refugees" target="_blank" rel="noopener">open the live map ↗</a>
+    <a class="btn btn-link" href="https://github.com/okoryem/Migration_Map" target="_blank" rel="noopener">view on GitHub ↗</a>
+  </div>
+</dialog>
+
+<script src="script.js?v=13" defer></script>
+</body>
+</html>
