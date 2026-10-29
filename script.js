@@ -41,7 +41,10 @@
   const head = document.querySelector('.side-head');
   const setOpen = (open) => { head.setAttribute('aria-expanded', String(open)); box.hidden = !open; };
   head.addEventListener('click', () => setOpen(head.getAttribute('aria-expanded') !== 'true'));
-  if (matchMedia('(max-width: 760px)').matches) setOpen(false);  // phones: projects first, filters on tap
+  // phones: projects first, filters on tap; desktop: filters always open
+  const phone = matchMedia('(max-width: 760px)');
+  setOpen(!phone.matches);
+  phone.addEventListener('change', (e) => setOpen(!e.matches));
 
   // ---------- about-me: file tree ----------
   const files = [...document.querySelectorAll('.file[data-file]')];

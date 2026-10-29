@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;450;500&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="styles.css?v=13">
+<link rel="stylesheet" href="styles.css?v=15">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
@@ -120,7 +120,7 @@
           </div>
           <div class="skill-group">
             <p class="cmt">// backend & infra</p>
-            <div class="skills"><button class="skill" type="button" data-skill="Cloudflare">Cloudflare Workers</button><button class="skill" type="button" data-skill="PostgreSQL">PostgreSQL</button><button class="skill" type="button" data-skill="Tauri">Tauri</button><button class="skill" type="button" data-skill="GitHub Actions">GitHub Actions</button><span class="skill">ffmpeg</span><span class="skill">Render</span></div>
+            <div class="skills"><button class="skill" type="button" data-skill="Cloudflare">Cloudflare Workers</button><button class="skill" type="button" data-skill="PostgreSQL">PostgreSQL</button><button class="skill" type="button" data-skill="Tauri">Tauri</button><button class="skill" type="button" data-skill="GitHub Actions">GitHub Actions</button><span class="skill">ffmpeg</span><span class="skill">Render</span><button class="skill" type="button" data-skill="AWS">AWS (S3, CloudFront, CDK)</button></div>
           </div>
         </div>
 
@@ -233,6 +233,16 @@ private static final Gson GSON = new GsonBuilder()
             </div>
           </article>
 
+          <article class="card" data-tech="Next.js,React,TypeScript,AWS">
+            <p class="card-label"><b>Project 6</b> // _travel-site</p>
+            <div class="card-box">
+              <img class="card-img" style="object-position: center 75%" src="media/travel-site.jpg" width="1600" height="1000" loading="lazy" alt="The Travels films page: a row of travel clips from Colombia, including Cocora Valley, a football clásico in Medellín, paragliding and Tayrona.">
+              <div class="card-body">
+                <p>A gallery for the travel films I shoot and colour-grade, organised on a world map.</p>
+                <button class="btn" type="button" data-open="d-ts">view-project</button>
+              </div>
+            </div>
+          </article>
         </div>
         <p class="empty" id="empty" hidden>// no projects match those filters</p>
       </div>
@@ -357,6 +367,20 @@ private static final Gson GSON = new GsonBuilder()
   </div>
 </dialog>
 
-<script src="script.js?v=13" defer></script>
+<dialog class="detail" id="d-ts" aria-labelledby="d-ts-h">
+  <button class="detail-x" type="button" data-close aria-label="Close">×</button>
+  <p class="card-label"><b>Project 6</b> // _travel-site</p>
+  <h2 id="d-ts-h">Travels</h2>
+  <p class="meta">2026 · work in progress</p>
+  <p>A home for the footage I shoot on my trips, filmed in 4K and colour-graded in DaVinci Resolve. Clips are organised by country on an interactive world map and in a films gallery: 17 so far, from Peru, Ecuador, Colombia, Guatemala and Grenada.</p>
+  <p>It’s a fully static Next.js site served from AWS: two private S3 buckets behind CloudFront, with the whole setup defined as code in AWS CDK. There’s no server or database, and it costs about $4 a month to run. Every clip is a record in a JSON manifest, so adding footage is a data change rather than new code.</p>
+  <ul class="stack"><li>Next.js</li><li>React 19</li><li>TypeScript</li><li>Tailwind CSS</li><li>AWS CDK</li><li>S3</li><li>CloudFront</li></ul>
+  <div class="links-row">
+    <a class="btn btn-link" href="https://d682bft2ks5jy.cloudfront.net" target="_blank" rel="noopener">open the site ↗</a>
+    <a class="btn btn-link" href="https://github.com/okoryem/travel-site" target="_blank" rel="noopener">view on GitHub ↗</a>
+  </div>
+</dialog>
+
+<script src="script.js?v=15" defer></script>
 </body>
 </html>
